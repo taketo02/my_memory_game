@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>神経衰弱 ── Memory Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎴 神経衰弱</h1>
+    <p class="tagline">カードを2枚めくって、 同じ絵柄を 見つけよう</p>
+  </header>
+
+  <section class="status">
+    <div class="status-item">
+      <span class="label">手数</span>
+      <span class="value" id="moves">0</span>
+    </div>
+    <div class="status-item">
+      <span class="label">時間</span>
+      <span class="value" id="timer">0:00</span>
+    </div>
+    <div class="status-item">
+      <span class="label">ペア</span>
+      <span class="value"><span id="matched">0</span> / <span id="total">8</span></span>
+    </div>
+    <button id="reset" class="reset-btn">リセット</button>
+  </section>
+
+  <main>
+    <div id="board" class="board"></div>
+  </main>
+
+  <div id="clear-modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>🎉 クリア！</h2>
+      <p>手数: <strong id="final-moves">0</strong>　時間: <strong id="final-time">0:00</strong></p>
+      <button id="play-again">もう一度</button>
+    </div>
+  </div>
+
+  <footer>
+    <p>カードの絵柄は <code>script.js</code> の <code>SYMBOLS</code> で変えられます</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
